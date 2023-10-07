@@ -115,6 +115,28 @@ impl Keyboard {
         }
     }
 
+    pub fn engram_cheyo() -> Keyboard {
+        Keyboard {
+            name: "engram_cheyo".into(),
+            rows: vec![
+                "vwdl`'uoyb".into(),
+                "nstr,.aeic".into(),
+                "pfmhqzkjxg".into(),
+            ],
+        }
+    }
+
+    pub fn chegram() -> Keyboard {
+        Keyboard {
+            name: "chegram".into(),
+            rows: vec![
+                "vcldw;uoyz".into(),
+                "rstnf.aeih".into(),
+                "qgmpb,kjx'".into(),
+            ],
+        }
+    }
+
     // pub fn inas() -> Keyboard {
     //     Keyboard {
     //         name: "inas".into(),
@@ -689,6 +711,8 @@ fn main() {
         Keyboard::dvorak(),
         Keyboard::colemak(),
         Keyboard::workman(),
+        Keyboard::engram_cheyo(),
+        Keyboard::chegram(),
     ];
 
     // Show the score for the standard keyboards
@@ -708,6 +732,9 @@ fn main() {
     for keyboard in result {
         println!("{}: {}", keyboard.0, keyboard.1);
     }
+
+    // turn off the creation of a new keyboard. I just want the keyboard scored
+    if  false {
 
     // println!("Finding a keyboard...");
     // let kb = Keyboard::jt();
@@ -751,4 +778,5 @@ fn main() {
         print!(".");
         let _ = std::io::stdout().flush();
     }
+}
 }
